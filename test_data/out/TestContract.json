@@ -1,0 +1,32 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b50610150806100206000396000f3fe",
+  "metadata": {
+    "language": "Solidity",
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "sources": {
+      "src/TestContract.sol": {
+        "content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.17;\n\ncontract TestContract {\n    constructor() {}\n}"
+      }
+    },
+    "settings": {
+      "evmVersion": "london",
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "remappings": [
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/"
+      ]
+    }
+  }
+}

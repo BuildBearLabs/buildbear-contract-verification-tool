@@ -1,0 +1,47 @@
+# Binaries for programs and plugins
+*.exe
+*.so
+*.dll
+
+# Temporary files
+*~
+._*
+
+# Directories for temporary files
+.tmp
+.cache
+
+# Logs
+logs
+*.log
+*.pid
+*.seed
+*.pid.lock
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Optional REPL history
+.node_repl_history
+
+# Package files
+*.zip
+*.tar.gz
+*.rar
+
+# Foundry
+foundry.toml
+forge.toml
+
+# Foundry cache
+.foundry
+forge-cache
+
+# macOS
+.DS_Store
+
+# Output
+processed-contracts.json
