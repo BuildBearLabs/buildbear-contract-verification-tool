@@ -25,15 +25,22 @@ go build -o buildbear-verify
 
 ## Usage
 
+1. Copy the above binary to the root directory of your dAap project.
+
+2. Run the tool:
+
 ```bash
-# Inside your dAap directory, furn for default paths 
+# For default paths
 ./buildbear-verify
 
 # Specify custom paths
 ./buildbear-verify -broadcast /path/to/broadcast -out /path/to/out
 
 # Send data to verification API
-./buildbear-verify -api https://api.example.com/verify
+./buildbear-verify -api [base_url]/node/verify/cli/:id
+
+# Example:
+./buildbear-verify -broadcast ./broadcast -out ./out -api https://api.buildbear.io/node/verify/cli/:id
 ```
 
 ### Command Line Flags
@@ -55,9 +62,3 @@ The tool generates:
 - `processed-contracts.json`: A JSON file containing all processed contract information
 - Console output showing the processing steps
 - If an API URL is provided, it sends the data to the specified endpoint
-
-## Example
-
-```bash
-./buildbear-verify -broadcast ./broadcast -out ./out -api https://api.buildbear.io/verify
-```

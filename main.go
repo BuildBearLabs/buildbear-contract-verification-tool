@@ -29,7 +29,7 @@ func main() {
 		log.Fatalf("Error processing directories: %v\n", err)
 	}
 
-	// Group contracts by name
+	// Group contracts by name for display purposes
 	dataGrouped := contract.GroupByContractName(data)
 
 	// Output the grouped data
@@ -44,7 +44,8 @@ func main() {
 	// Send data to backend route for verification if API URL is provided
 	if apiURL != "" {
 		log.Printf("Sending data to verification API at %s\n", apiURL)
-		err = api.SendToVerificationAPI(dataGrouped, apiURL)
+		// Send the original data format (before grouping) to the API
+		err = api.SendRawContractsToVerificationAPI(data, apiURL)
 		if err != nil {
 			log.Fatalf("Error sending data to verification API: %v\n", err)
 		}
